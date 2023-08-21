@@ -28,6 +28,8 @@ def check_resources(user_order):
 
 
 def check_transaction(user_order, inserted_coins):
+    """Takes in the user order as str, coins inserted as a float value and returns either the cost of
+     the item or 0 if the inserted coins < the cost of the drink"""
     item_cost = MENU[user_order]['cost']
     if inserted_coins >= item_cost:
         # money += inserted_coins
